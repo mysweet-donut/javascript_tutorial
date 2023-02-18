@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="clock"></div>
+
+    <script>
+        function clock(){
+            //let a = new Array;
+            //let a = new String;
+            //console.log(a);
+
+            //new Date();
+
+            let now = new Date();
+            //console.log(now);
+
+            let year = now.getFullYear();
+            let month = now.getMonth();
+            let _date = now.getDate();
+            let day = now.getDay();
+            let hour = now.getHours();
+            let min = now.getMinutes();
+            let sec = now.getSeconds();
+
+            
+            //document.write("2023년 2월 12일 일요일 00시 00분 00초");
+
+            // if문
+            // if(day === 0){
+            //     day = "일"
+            // }else if(day === 1){
+            //     day = "월"
+            // }
+
+            // switch문
+            // switch(day){
+            //     case 0 : day = "일";
+            //     break;
+            //     case 1 : day = "월";
+            //     break;
+            // }
+
+            const week = ["일", "월", "화", "수", "목", "금", "토"];
+
+            // 24시간제 -> 12시간제
+            if(hour > 12){
+                hour = hour -12;
+            }   
+
+            // 시,분,초가 한 자릿수로 출력될 경우 -> 두 자릿수로 변경
+            if(hour <10){
+                hour = "0" + hour;
+            }
+            if(min <10){
+                min = "0" + min;
+            }
+            if(sec <10){
+                sec = "0"+sec;
+            }
+
+            //document.write(`${year}년 ${month+1}월 ${_date}일 ${week[day]}요일 ${hour}시 ${min}분 ${sec}초<br>`);
+            document.querySelector(".clock").innerText = `${year}년 ${month+1}월 ${_date}일 ${week[day]}요일 ${hour}시 ${min}분 ${sec}초`;
+        }//fuction fin.
+
+        //자동적으로 반복 실행
+        setInterval(clock, 500); //0.5초마다 실행
+        clock(); //ㅠㅔ이지가 로드되자마자
+
+        //console.log(year, month, _date, day, hour, min, sec);
+    </script>
+</body>
+</html>

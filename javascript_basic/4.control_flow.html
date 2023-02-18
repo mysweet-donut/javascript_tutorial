@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 제어문(control flow)
+        // : 코드 실행을 제어하는 구문
+
+        // 조건문
+        // 조건식의 판별결과에 따라
+        // 코드 블록의 실행 여부를 결정
+        // *조건식: 참과 거짓으로 판별 가능한 표현식
+
+        /*
+            if(조건식){
+                조건식이 참일 경우
+                실행될 실행코드
+            }else{
+                조건식이 거짓일 경우
+                실행될 실행코드
+            }
+        */
+        
+        /*
+            발 사이즈를 물어보고,
+            입력받은 사이즈가 270이상이면
+            "재고가 없습니다."
+        */
+        //let size = prompt("발 사이즈를 입력해주세요.");
+    //    //console.log(size);
+
+    //    if(size >= 270){
+    //         alert("재고가 없습니다.");
+    //    }else{
+    //         alert("재고가 있습니다.");
+    //    }
+
+
+        /*
+            if(조건식){
+                조건식1이 참일 경우...
+            }else if(조건식2){
+                조건식2가 참일 경우...
+            }else if(조건식n){
+                조건식n이 참일 경우...
+            }else{
+                그 어떠한 조건식에서도
+                참이 아닐 경우...
+            }
+        */
+
+        // 230이하면 재고 없음
+        // 270이상이면 재고 소량
+        // 그외 재고있음
+        let size = prompt("발 사이즈를 입력해주세요.");
+
+        if(size <= 230){
+            alert("재고 없음");
+        }else if(size >= 270){
+            alert("재고 소량");
+        }else{
+            alert("재고 있음");
+        }        
+    </script>
+</body>
+</html>

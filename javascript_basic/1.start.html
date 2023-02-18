@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var a = 123; //변수를 선언
+
+        // 변수 : 데이터를 저장하는 공간
+
+        // var : 변수 선언 키워드(함수 단위의 유효범위를 가진다.)
+        // let, const : 블록 단위의 유효범위
+        // a : 변수의 이름(LabeLing)
+        // = : 저장하다, 할당하다
+        // 123 : data
+        // ; : 명령을 마침
+
+        // 변수 이름 작성방법
+        // 1. 숫자로 시작 금지
+        // 2. 뛰어쓰기 안됨
+        // 3. 특수문자는 $, _만 가능
+        // 4. 대소문자를 구별함(my_name <-> My_name)
+        // 5. '예약어' 사용 금지
+        // 6. 직관적인 이름 사용
+        // 7. 뛰어쓰기 표현 방법
+        //    1) snake csse : my_first_var
+        //    2) camel case : myFirstVar (o)
+
+        var abc = "가나다라";
+        // 변수는 한번에 하나의 데이터
+        console.log(abc);
+        abc = "랄라랄라";
+
+        // Let, const
+        let b = 123;
+            b = "새로운 데이터"; //ok
+        console.log(b);
+
+        const c = 123;
+              c = "새로운 데이터"; //type err
+        console.log(c);      
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // OPERATOR(연산자)
+        // 이항산술연산
+        // + - * / %
+
+        let a = 100;
+        let b = 200;
+        console.log(a + b);
+
+        let a1 = 123;
+        let b1 = "123";
+        console.log(a1 + b1); //암시적 형변환
+
+        //단항산술연산자(증가/ 감소연산자)
+        //++ -- 
+        let c = 100;
+        c++;
+        console.log(c);
+        // 전위연산자 vs 후위연산자
+
+        // 대입연산자(할당연산자)
+        // += -= *= /= %=
+        //변수 +- 10;
+        //변수 = 변수+10;
+
+        let d = 100;
+        d += 1
+
+        //d = d + 10
+        console.log(d);
+
+        // 동등/ 일치연산자
+        // = : 할당하다
+        // == : 값이 같다
+        // === : 값과 데이터의 형태까지 모두 같다
+
+        // ! : 부정을 의미
+        // != : 값이 다르다
+        // !== : 값고 데이터의 형태까지 모두 다름
+
+        let e = 123;
+        let f = 123;
+        console.log(e == f);
+
+        // 비교연산자
+        // > < <= >=
+        let g = 200;
+        let h = 300;
+        console.log(g < h);
+
+        // 논리연산자
+        // ~이거나, ~ 또는 : 논리1 || 논리2
+        // ~이면서, ~이고 : 논리1 && 논리2
+        console.log(g<h && h<i);
+    </script>
+</body>
+</html>

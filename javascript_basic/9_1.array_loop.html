@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+
+    <script>
+        //배열의 순회(loop)
+
+        let favFru = ["망고", "딸기", "자두", "수박", "복숭아"];
+
+        for(let i = 0; i < 5; i++){
+            console.log(favFru[i]);
+        }
+
+        // javaScript에서 선택자
+        // 1. querySelector : 단수
+        // querySelectorALL :복수
+        // css선택자랑 유사
+
+        // 2. getElecment(s)Byoo0
+        // 성능이 좋음(빠름, 호환성 좋음)
+
+        let $boxes = document.querySelectorAll("div");
+        let colors = ["red", "green", "pink", "blue", "orange"];
+
+        // for(let i = 0; i < $boxes.length; i++){
+        //     $boxes[i].style.height = "300px";
+        //     $boxes[i].style.backgroundColor = colors[i];
+        // }
+        // console.log($boxes); //array like(유사배열)
+
+        $boxes.forEach(function(box, i){
+            box.style.height = "300px";
+            box.style.backgroundColor = colors[i];
+        });
+
+        // 1. .forEach();
+        // let ex1 = [1,2,3,4,5];
+
+        // ex1.forEach(function(i, j){
+        //     console.log(i, j);
+        // });
+
+        // 2. .map();
+        let fri = ["철수", "영희", "바둑이"]
+
+        let result = fri.map(function(item, i){
+            return item + "야 안녕?";
+        });
+        console.log(result);
+    </script>
+</body>
+</html>

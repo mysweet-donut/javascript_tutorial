@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let str = "안녕하세요"; //문자형 데이터(string)
+        let num = 123; //숫자형 데이터(number)
+        let bln = true; //논리형 데이터(booLean)
+
+        let non = null; //null data(널 : 빈 값/ 명시적으로 비우는 것)
+        let non2; //undefined(어떠한 속성/ 자연발생적)
+        // NaN : 연산오류(Not a Number)
+
+        console.log(str, num, bln, non, non2);
+
+        // 데이터의 형 변환
+        let data1 = "123";
+        // 형태 검사
+        // typeof(DATA); 데이터의 형태를 검사한 다음 결과 값을 리턴
+        console.log(typeof(data1));
+
+        data1 = Number(data1);
+        console.log(typeof(data1));
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 스케줄링 함수
+        // 1. 일정 시간 이후에 실행
+        // setTimeout(함수, 시간);
+        // 1초 -> 1000 
+        // -> 일정 시간 이후에 함수가 실행!
+        setTimeout(function(){
+           //console.log("run!!");
+        }, 1000);
+
+        // 2. 일정 시간마다 실행
+        // setInterval(함수, 시간);
+        // ->해당 시간마다 함수가 반복적으로 실행
+        setInterval(function(){
+            //console.log("repeated!!");
+        },1000);
+        
+        // 3. 반복 실행을 멈춤
+        // clearInterval(변수);
+        
+        let repeat = setInterval(function(){
+            console.log("repeated!!");
+        }, 1000);
+
+        setTimeout(function(){
+            clearInterval(repeat);
+        },5000);
+    </script>
+</body>
+</html>
