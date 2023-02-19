@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ddd;
+}
+h1{
+    text-align: center;
+    margin: 30px;
+}
+.accordion{
+    width: 600px;
+    margin: 0 auto;
+}
+.content{
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.content h2{
+    padding: 16px;
+    background-color: #222;
+    color: #fff;
+    position: relative;
+}
+.content h2::after{
+    content: '+';
+    position: absolute;
+    top: 12px;
+    right: 16px;
+}
+.content.active h2::after{
+    content: '-';
+}
+.content .text{
+    padding: 0 20px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.content.active .text{
+    padding: 10px 20px;
+    height: 140px;
+}
