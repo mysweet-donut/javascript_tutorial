@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: pink;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.content{
+    width: 600px;
+    margin: 0 auto;
+}
+.content.active{
+    filter: blur(20px);
+}
+.content h2{
+    margin: 20px 0;
+}
+.content .photo{
+    width: 600px;
+    height: 400px;
+    background-image: url('https://picsum.photos/600/400');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.btn{
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #111;
+    color: #fff;
+    margin: 20px 0;
+}
+.modal{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    transition: all 0.3s;
+    opacity: 0;
+}
+.modal.active{
+    top: 50%;
+    opacity: 1;
+}
