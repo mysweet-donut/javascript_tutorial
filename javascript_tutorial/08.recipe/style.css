@@ -19,3 +19,25 @@ body{
     max-width: 1200px;
     margin: 0 auto;
 }
+.food_list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 50px 0;
+}
+.food_list img{
+    width: 100%;
+    display: block;
+}
+h1{
+    text-align: center;
+    margin: 50px 0;
+}
+form{
+    width: 500px;
+    margin: 0 auto;
+}
+form input{
+    width: 100%;
+    padding: 16px;
+}
