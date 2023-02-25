@@ -30,8 +30,6 @@ function loadCoords(){
 }
 
 function geoSucces(position){
-    console.log(position);
-
     const lat = position.coords.latitude
     const lon = position.coords.longitude
     
