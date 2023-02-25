@@ -5,6 +5,8 @@ const foodList = document.querySelector('.food_list')
 const APP_ID = '45b0e405'
 const APP_KEY = '2b8724db4a5c0fa6881ef312ec702bd1'
 
+const foodName = 'coffee'
+
 function paintRecipe(items){
     let foods = ''
     items.map(item =>{
@@ -18,7 +20,7 @@ function paintRecipe(items){
                     <h3>${item.recipe.label}</h3>
                     <a href="${item.recipe.url}" target="_blank">view recipe</a>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium accusamus consequatur, distinctio deserunt, est, in libero illo numquam qui magnam velit officiis delectus possimus enim vel? Voluptatibus, ipsam labore! Totam.
+                        ${item.recipe.calories}
                     </p>    
                 </div>
             </div>
@@ -28,7 +30,6 @@ function paintRecipe(items){
 
     foodList.innerHTML = foods
 }
-
 
 function getRecipe(query){
     console.log(query)
@@ -40,9 +41,14 @@ function getRecipe(query){
 }
 
 function init(){
+    getRecipe(foodName)
+
     form.addEventListener('submit', function(e){
         e.preventDefault()
         const query = input.value
+        
+        if(query === '') return
+
         getRecipe(query)
     })
 }
